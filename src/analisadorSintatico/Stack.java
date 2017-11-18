@@ -1,28 +1,31 @@
 package analisadorSintatico;
 
-public class Stack extends Throwable{
+public class Stack {
 	
 	private static int base = 0;
-    private int top,edge = 2;
+    private int top;
     private String[] array;
-    private char[] expression;
+    private char[] expression = new char[array.length];
     
-    public Stack (){
+    public Stack (int edge){
     	int top = -1;
-    	array = new String[edge + 1];
+    	array = new String[edge];
     }
     
-    void insert(char[] expression) {
-    	expression = new char[expression.length];
-    	for(int i = 0; i <= expression.length; i++) {
-    		top+=1;
-    		this.expression[i] = expression[i];
-    	}
+    public Stack() {
+    	
     }
+    
+    void insert(char c) {
+    	top++;
+    	this.expression[top] = c;
+    	}
+  
     
     
     void remove() {
-    	top-=1;
+    	top--;
+    	
     	if (top < base) 
     		System.out.println("Pilha vazia");
     		
