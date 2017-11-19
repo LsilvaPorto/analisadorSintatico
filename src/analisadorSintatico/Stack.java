@@ -1,36 +1,38 @@
+
 package analisadorSintatico;
 
 public class Stack {
 	
 	private static int base = 0;
     private int top;
-    private String[] array;
-    private char[] expression = new char[array.length];
+    private String[] stringArray;
+    private char[] expression;
     
-    public Stack (int edge){
-    	int top = -1;
-    	array = new String[edge];
-    }
     
-    public Stack() {
+    public Stack (int limit){
     	
+    	this.top = -1;
+    	stringArray = new String[limit];
+    	this.expression = new char[stringArray.length];
     }
     
     void insert(char c) {
-    	top++;
-    	this.expression[top] = c;
-    	}
-  
-    
-    
-    void remove() {
-    	top--;
     	
-    	if (top < base) 
-    		System.out.println("Pilha vazia");
-    		
+    	this.top++;
+    	this.expression[this.top] = c;
+    }
+  
+    void remove() {
+    	
+    	this.top--;
+    	
+    	if (this.isEmpty()) {
+    		return;
+    	}
     }
     
-    
-    
+    public boolean isEmpty() {
+    	
+    	return this.top < base;
+    }
 }
