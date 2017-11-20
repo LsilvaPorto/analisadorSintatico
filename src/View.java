@@ -10,7 +10,7 @@ public class View {
 		int limit;
 		char[] array;
 		
-		expression = JOptionPane.showInputDialog("Informe a expressão a ser testada: ");
+		expression = JOptionPane.showInputDialog("Informe a expressão Matemática a ser testada: ");
 
 		array = new char[expression.length() - 1];
 		array = expression.toCharArray();
@@ -22,7 +22,6 @@ public class View {
 		}else {
 			JOptionPane.showMessageDialog(null,"Expressão Inválida");
 		}
-		
-		System.out.println(stack.isEmpty());
+
 	}
 }
