@@ -1,6 +1,4 @@
 
-package analisadorSintatico;
-
 public class Validation {
 	
 	public static boolean loop(char[] array, Stack stack) {

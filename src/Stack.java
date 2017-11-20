@@ -1,6 +1,4 @@
 
-package analisadorSintatico;
-
 public class Stack {
 	
 	private static int base = 0;

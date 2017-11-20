@@ -1,6 +1,4 @@
 
-package analisadorSintatico;
-
 import java.util.Scanner;
 
 public class View {
