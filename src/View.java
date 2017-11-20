@@ -18,9 +18,9 @@ public class View {
 		Stack stack = new Stack(limit);
 
 		if(Validation.loop(array, stack)) {
-			JOptionPane.showMessageDialog(null,"Expressão Aceita");
+			JOptionPane.showMessageDialog(null,expression+" é uma expressão válida");
 		}else {
-			JOptionPane.showMessageDialog(null,"Expressão Inválida");
+			JOptionPane.showMessageDialog(null,expression+" é uma expressão Inválida");
 		}
 
 	}
