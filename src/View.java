@@ -1,5 +1,5 @@
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class View {
 
@@ -7,12 +7,10 @@ public class View {
 	public static void main(String[] args) {
 		
 		String expression;
-		Scanner scanner = new Scanner(System.in);
 		int limit;
 		char[] array;
 		
-		System.out.println("Informe a expressão a ser testada: ");
-		expression = scanner.nextLine();
+		expression = JOptionPane.showInputDialog("Informe a expressão a ser testada: ");
 
 		array = new char[expression.length() - 1];
 		array = expression.toCharArray();
@@ -20,9 +18,9 @@ public class View {
 		Stack stack = new Stack(limit);
 
 		if(Validation.loop(array, stack)) {
-			System.out.println("Expressão Aceita");
+			JOptionPane.showMessageDialog(null,"Expressão Aceita");
 		}else {
-			System.out.println("Expressão Inválida");
+			JOptionPane.showMessageDialog(null,"Expressão Inválida");
 		}
 		
 		System.out.println(stack.isEmpty());
