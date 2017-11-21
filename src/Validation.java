@@ -7,7 +7,6 @@ public class Validation {
 		int close = 0, parenthesesClose = 0, bracketsClose = 0, bracesClose = 0;
 		int i = 0;
 		
-		
 		while(i < array.length) {
 			
 			if (array[i] == '(' || array[i] == '[' || array[i] == '{') {
@@ -46,9 +45,9 @@ public class Validation {
 			i++;
 		}
 		
-		if(parenthesesClose == parenthesesOpen && bracketsOpen == bracketsClose && bracesOpen == bracesClose)
-				return close == open;
-			else
-				return false;
+		if(parenthesesClose == parenthesesOpen && bracketsOpen == bracketsClose && bracesOpen == bracesClose) {
+			return close == open;			
+		}
+		return false;
 	}
 }
