@@ -32,17 +32,17 @@ public class Stack {
   
     void remove() {
     	top--;
-    	
     }
     
     
     public static boolean isEmpty() {
-    	
     	return top == -1;
     }
+    
     public static int getTop() {
     	return top;
     }
+    
     public static void setTop(int t) {
     	top = t;
     }
