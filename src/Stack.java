@@ -18,6 +18,7 @@ public class Stack {
     		top++;
     		expression[top] = ')';
     	}
+    	
 		if (c == '[') {
 			top++;
 			expression[top] = ']';
@@ -27,7 +28,6 @@ public class Stack {
 			top++;
 			expression[top] = '}';
 		}
-    	
     }
   
     void remove() {
