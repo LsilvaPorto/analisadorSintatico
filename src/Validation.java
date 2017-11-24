@@ -45,10 +45,6 @@ public class Validation {
 					
 		}
 		
-		if(Stack.isEmpty() && countDelete == countInsert)
-			return true;
-		else
-			return false;
-		
+		return (Stack.isEmpty() && countDelete == countInsert);
 	}		
 }

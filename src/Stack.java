@@ -33,7 +33,7 @@ public class Stack {
     void remove() {
     	top--;
     	
-    	}
+    }
     
     
     public static boolean isEmpty() {
