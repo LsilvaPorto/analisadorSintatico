@@ -40,11 +40,7 @@ public class Validation {
 			
 			if (array[i] == '}' && array[i] == Stack.expression[Stack.getTop()])
 				stack.remove();
-			
-			
-			//if (array[i] == ']')
 				
-			
 			i++;
 					
 		}
