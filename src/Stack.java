@@ -1,36 +1,47 @@
 
 public class Stack {
 	
-	private static int base = 0;
-    private int top;
+    private static int top = -1;
     private String[] stringArray;
-    private char[] expression;
+    public static char[] expression;
     
     
     public Stack (int limit){
     	
-    	this.top = -1;
     	stringArray = new String[limit];
-    	this.expression = new char[stringArray.length];
+    	expression = new char[stringArray.length];
     }
+    
     
     void insert(char c) {
     	
-    	this.top++;
-    	this.expression[this.top] = c;
+    	if (c == '(') {
+    		top++;
+    		expression[top] = ')';
+    	}
+		if (c == '[') {
+			top++;
+			expression[top] = ']';
+		}
+		
+		if (c == '{') {
+			top++;
+			expression[top] = '}';
+		}
+    	
     }
   
     void remove() {
+    	top--;
     	
-    	this.top--;
-    	
-    	if (this.isEmpty()) {
-    		return;
     	}
-    }
     
-    public boolean isEmpty() {
+    
+    public static boolean isEmpty() {
     	
-    	return this.top < base;
+    	return top == -1;
+    }
+    public static int getTop() {
+    	return top;
     }
 }

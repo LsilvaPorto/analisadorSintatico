@@ -3,51 +3,38 @@ public class Validation {
 	
 	public static boolean loop(char[] array, Stack stack) {
 		
-		int open = 0, parenthesesOpen = 0, bracketsOpen = 0, bracesOpen = 0;
-		int close = 0, parenthesesClose = 0, bracketsClose = 0, bracesClose = 0;
-		int i = 0;
+	int i = 0;	
+		
 		
 		while(i < array.length) {
 			
-			if (array[i] == '(' || array[i] == '[' || array[i] == '{') {
+			if (array[i] == '(') 
+				stack.insert('(');
 				
-				stack.insert(array[i]);
-				open++;
-				
-				if(array[i] == '(')
-					parenthesesOpen++;
-				
-				if(array[i] == '[')
-					bracketsOpen++;
-				
-				if(array[i] == '{')
-					bracesOpen++;
-			}
+			if (array[i] == '[') 
+				stack.insert('[');
 			
-			if (array[i] == ')' || array[i] == ']' || array[i] == '}') {
+			if (array[i] == '{') 
+				stack.insert('{');
 				
-				if(stack.isEmpty()) {
-					return false;
-				}
+			if (array[i] == ')' && array[i] == Stack.expression[Stack.getTop()])
 				stack.remove();
-				close++;
-				
-				if(array[i] == ')')
-					parenthesesClose++;
-				
-				if(array[i] == ']')
-					bracketsClose++;
-				
-				if(array[i] == '}')
-					bracesClose++;
-			}
+			
+			if (array[i] == ']' && array[i] == Stack.expression[Stack.getTop()])
+				stack.remove();
+			
+			if (array[i] == '}' && array[i] == Stack.expression[Stack.getTop()])
+				stack.remove();
 			
 			i++;
+					
 		}
+			
 		
-		if(parenthesesClose == parenthesesOpen && bracketsOpen == bracketsClose && bracesOpen == bracesClose) {
-			return close == open;			
-		}
-		return false;
-	}
+		if(Stack.isEmpty())
+			return true;
+		else
+			return false;
+		
+	}		
 }
