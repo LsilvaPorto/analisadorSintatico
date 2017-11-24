@@ -27,6 +27,5 @@ public class View {
 		}else {
 			JOptionPane.showMessageDialog(null,expression+" é uma expressão Inválida");
 		}
-		System.out.println(Stack.isEmpty()+""+ Stack.getTop());
 	}
 }
