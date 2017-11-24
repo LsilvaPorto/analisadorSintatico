@@ -5,7 +5,6 @@ public class Stack {
     private String[] stringArray;
     public static char[] expression;
     
-    
     public Stack (int limit){
     	
     	stringArray = new String[limit];
@@ -43,5 +42,8 @@ public class Stack {
     }
     public static int getTop() {
     	return top;
+    }
+    public static void setTop(int t) {
+    	top = t;
     }
 }
