@@ -12,27 +12,13 @@ public class Stack {
     
     
     void insert(char c) {
-    	
-    	if (c == '(') {
-    		top++;
-    		charStack[top] = ')';
-    	}
-    	
-		if (c == '[') {
-			top++;
-			charStack[top] = ']';
-		}
-		
-		if (c == '{') {
-			top++;
-			charStack[top] = '}';
-		}
+		top++;
+		charStack[top] = c;
     }
   
     void remove() {
     	top--;
     }
-    
     
     public static boolean isEmpty() {
     	return top == -1;
