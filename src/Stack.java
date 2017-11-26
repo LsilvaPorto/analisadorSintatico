@@ -3,12 +3,11 @@ public class Stack {
 	
     private static int top = -1;
     private String[] stringArray;
-    public static char[] expression;
+    public static char[] charStack;
     
     public Stack (int limit){
-    	
     	stringArray = new String[limit];
-    	expression = new char[stringArray.length];
+    	charStack = new char[stringArray.length];
     }
     
     
@@ -16,17 +15,17 @@ public class Stack {
     	
     	if (c == '(') {
     		top++;
-    		expression[top] = ')';
+    		charStack[top] = ')';
     	}
     	
 		if (c == '[') {
 			top++;
-			expression[top] = ']';
+			charStack[top] = ']';
 		}
 		
 		if (c == '{') {
 			top++;
-			expression[top] = '}';
+			charStack[top] = '}';
 		}
     }
   

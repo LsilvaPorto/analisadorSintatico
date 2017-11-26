@@ -8,9 +8,12 @@ public class Validation {
 		
 		while(i < array.length) {
 			
+			
+			//Se o elemento for (, [, { adiciona um na variável countInsert
 			if (array[i] == '(' || array[i] == '[' || array[i] == '{')
 				countInsert++;
 			
+			//Se o elemento for ), ], } adiciona um na variável countDelete
 			if (array[i] == ')' || array[i] == ']' || array[i] == '}')
 				countDelete++;
 			
@@ -32,15 +35,9 @@ public class Validation {
 			if (array[i] == '}' && Stack.isEmpty())
 				Stack.setTop(Stack.getTop()+1);
 			
-			if (array[i] == ')' && array[i] == Stack.expression[Stack.getTop()])
-				stack.remove();
-			
-			if (array[i] == ']' && array[i] == Stack.expression[Stack.getTop()])
-				stack.remove();
-			
-			if (array[i] == '}' && array[i] == Stack.expression[Stack.getTop()])
-				stack.remove();
-				
+			//Remove da Pilha se o elemento for igual à ), ], }
+			StackUtils.ifEqualsRemove(array, i, stack);
+
 			i++;
 					
 		}
