@@ -13,6 +13,7 @@ public class Validation {
 			if ((array[i] == ')' || array[i] == ']' || array[i] == '}') && Stack.isEmpty()) 
 				Stack.setTop(Stack.getTop()+1);
 			
+			//Verifica se o valor lido é o fechamento para a respectiva abertura 
 			if (( array[i] == ')' || array[i] == ']' || array[i] == '}')) {
 				if(array[i] == ')' && Stack.charStack[Stack.getTop()] == '(')
 					stack.remove();	

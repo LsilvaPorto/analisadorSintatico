@@ -10,7 +10,7 @@ public class View {
 		char[] array;
 		
 		expression = JOptionPane.showInputDialog("Informe a expressão Matemática a ser testada: ");
-
+		
 		try {
 			array = new char[expression.length() - 1];
 			array = expression.toCharArray();			
