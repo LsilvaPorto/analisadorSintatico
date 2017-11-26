@@ -3,8 +3,8 @@ public class Validation {
 	
 	public static boolean loop(char[] array, Stack stack) {
 		
-	int i = 0;	
-		
+		int i = 0;	
+			
 		while(i < array.length) {
 			
 			if ((array[i] == '(' || array[i] == '[' || array[i] == '{')) 
@@ -22,10 +22,11 @@ public class Validation {
 				else if(array[i] == '}' && Stack.charStack[Stack.getTop()] == '{')
 					stack.remove();
 			}
-
+	
 			i++;
 		}
 		
 		return (Stack.isEmpty());
-	}		
+	}
 }
+
