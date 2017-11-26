@@ -17,19 +17,15 @@ public class Validation {
 			if (array[i] == ')' || array[i] == ']' || array[i] == '}')
 				countDelete++;
 			
-			StackUtils.isInsertOption(array, i, stack);
-				
-			if (array[i] == ')' && Stack.isEmpty()) 
+			
+			if ((array[i] == '(' || array[i] == '[' || array[i] == '{')) 
+				stack.insert(array[i]);
+			
+			if ((array[i] == ')' || array[i] == ']' || array[i] == '}') && Stack.isEmpty()) 
 				Stack.setTop(Stack.getTop()+1);
 			
-			if (array[i] == ']' && Stack.isEmpty())
-				Stack.setTop(Stack.getTop()+1);
-			
-			if (array[i] == '}' && Stack.isEmpty())
-				Stack.setTop(Stack.getTop()+1);
-			
-			//Remove da Pilha se o elemento for igual à ), ], }
-			StackUtils.isRemoveOption(array, i, stack);
+			if (( array[i] == ')' || array[i] == ']' || array[i] == '}') && array[i] == Stack.charStack[Stack.getTop()])
+				stack.remove();
 
 			i++;
 					
