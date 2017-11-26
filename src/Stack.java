@@ -24,11 +24,7 @@ public class Stack {
     	return top == -1;
     }
     
-    public static int getTop() {
-    	return top;
-    }
-    
-    public static void setTop(int t) {
-    	top = t;
+    public char getCharStackTop() {
+    	return charStack[top];
     }
 }

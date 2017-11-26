@@ -16,11 +16,11 @@ public class Validation {
 				if(Stack.isEmpty())
 					return false;
 				
-				if(array[i] == ')' && Stack.charStack[Stack.getTop()] == '(')
+				if(array[i] == ')' && stack.getCharStackTop() == '(')
 					stack.remove();	
-				else if(array[i] == ']' && Stack.charStack[Stack.getTop()] == '[')
+				else if(array[i] == ']' && stack.getCharStackTop() == '[')
 					stack.remove();
-				else if(array[i] == '}' && Stack.charStack[Stack.getTop()] == '{')
+				else if(array[i] == '}' && stack.getCharStackTop() == '{')
 					stack.remove();
 			}
 	
