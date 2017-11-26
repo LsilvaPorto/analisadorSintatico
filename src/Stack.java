@@ -20,7 +20,7 @@ public class Stack {
     	top--;
     }
     
-    public static boolean isEmpty() {
+    public boolean isEmpty() {
     	return top == -1;
     }
     
