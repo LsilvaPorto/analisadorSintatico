@@ -17,14 +17,7 @@ public class Validation {
 			if (array[i] == ')' || array[i] == ']' || array[i] == '}')
 				countDelete++;
 			
-			if (array[i] == '(') 
-				stack.insert(array[i]);
-				
-			if (array[i] == '[') 
-				stack.insert(array[i]);
-			
-			if (array[i] == '{') 
-				stack.insert(array[i]);
+			StackUtils.ifEqualsInsert(array, i, stack);
 				
 			if (array[i] == ')' && Stack.isEmpty()) 
 				Stack.setTop(Stack.getTop()+1);
