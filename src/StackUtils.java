@@ -1,7 +1,7 @@
 
 public class StackUtils {
 	
-	public static void ifEqualsRemove(char[] array, int i, Stack stack) {
+	public static void isRemoveOption(char[] array, int i, Stack stack) {
 		
 		if (array[i] == ')' 
 				&& array[i] == Stack.charStack[Stack.getTop()])
@@ -16,7 +16,7 @@ public class StackUtils {
 			stack.remove();
 	}
 	
-	public static void ifEqualsInsert(char[] array, int i, Stack stack) {
+	public static void isInsertOption(char[] array, int i, Stack stack) {
 		
 		if (array[i] == '(') 
 			stack.insert(array[i]);

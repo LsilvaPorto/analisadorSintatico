@@ -17,7 +17,7 @@ public class Validation {
 			if (array[i] == ')' || array[i] == ']' || array[i] == '}')
 				countDelete++;
 			
-			StackUtils.ifEqualsInsert(array, i, stack);
+			StackUtils.isInsertOption(array, i, stack);
 				
 			if (array[i] == ')' && Stack.isEmpty()) 
 				Stack.setTop(Stack.getTop()+1);
@@ -29,7 +29,7 @@ public class Validation {
 				Stack.setTop(Stack.getTop()+1);
 			
 			//Remove da Pilha se o elemento for igual à ), ], }
-			StackUtils.ifEqualsRemove(array, i, stack);
+			StackUtils.isRemoveOption(array, i, stack);
 
 			i++;
 					
