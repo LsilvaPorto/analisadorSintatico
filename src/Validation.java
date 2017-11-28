@@ -22,6 +22,8 @@ public class Validation {
 					stack.remove();
 				else if(array[i] == '}' && stack.getCharStackTop() == '{')
 					stack.remove();
+				else
+					return false;
 			}
 	
 			i++;
