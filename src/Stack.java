@@ -2,12 +2,10 @@
 public class Stack {
 	
     private static int top = -1;
-    private String[] stringArray;
     public static char[] charStack;
     
     public Stack (int limit){
-    	stringArray = new String[limit];
-    	charStack = new char[stringArray.length];
+    	charStack = new char[limit];
     }
     
     
